@@ -43,24 +43,24 @@ app.get('/authors', (req,res) => {
   res.send(authors)
 })
 
-app.get('/authors/:id'), (req, res) => {
-  const AuthorId = req.params.id
-if (!authors[AuthorId]) {
-  next()
-}
-  res.send(authors[AuthorId])
-}
+// app.get('/authors/:id'), (req, res) => {
+//   const AuthorId = req.params.id
+// if (!authors[AuthorId]) {
+//   next()
+// }
+//   res.send(authors[AuthorId])
+// }
 
-app.get('/authors/:id/books'), (req, res) => {
-  const AuthorId = req.params.id
-  const author = authors[AuthorId]
+// app.get('/authors/:id/books'), (req, res) => {
+//   const AuthorId = req.params.id
+//   const author = authors[AuthorId]
 
-  if(!author) {
-    next()
-  }
+//   if(!author) {
+//     next()
+//   }
 
-  res.send(authors[AuthorId].books)
-}
+//   res.send(authors[AuthorId].books)
+// }
 
 
 app.post('/authors/:id/books'), (req, res) => {
